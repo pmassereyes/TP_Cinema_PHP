@@ -1,6 +1,7 @@
 <?php
 
 include  "Film.php";
+include  "Realisateur.php";
 
 //Instancier un objet de type « Film » et afficher ses informations
 $filmF1 = new Film(1, "BAC Nord", 563921);
@@ -20,3 +21,6 @@ foreach ($films as $film) {
 }
 
 //Nous souhaitons maintenant connaître le réalisateur pour chaque film.
+$real1 = new Realisateur("Jimenez","Cedric");
+$real2 = new Realisateur("Gozian","Yann");
+$real3 = new Realisateur("Matt","Reeves");
