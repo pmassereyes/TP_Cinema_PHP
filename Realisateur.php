@@ -1,10 +1,9 @@
 <?php
 
-class Realisateur extends Film {
+class Realisateur {
     private string $nomRealisateur;
     private string $prenomRealisateur;
-    public function __construct(int $idFilm, string $nomFilm, int $nbEntrees, string $nomRealisateur, string $prenomRealisateur) {
-        parent::__construct($idFilm, $nomFilm, $nbEntrees);
+    public function __construct(string $nomRealisateur, string $prenomRealisateur) {
         $this->nomRealisateur = $nomRealisateur;
         $this->prenomRealisateur = $prenomRealisateur;
     }
