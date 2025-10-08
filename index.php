@@ -32,17 +32,12 @@ $films = [
     $filmF3 = new Film(3, "The Batman", 1523984, new Realisateur("Matt","Reeves"),[$act1Film3,$act2Film3,$act3Film3]),
 ];
 
-//foreach ($films as $film) {
-    //echo "Infos sur le film :==> ". "\n" . $film->getIdFilm() . " - " . $film->getNomFilm(). " - ". $film->getNbEntrees() . " - ". $film->getRealisateur()->getNomRealisateur() . " " .$film->getRealisateur()->getPrenomRealisateur() . "\n".
-     //" Liste des acteurs ==> " . $film->getActeurs()->getNomActeur() . " - " . $film->getActeurs()->getPrenomActeur() . " - " . $film->getActeurs()->getEstCesarise() . "\n" ;
-//}
-
 foreach ($films as $film) {
     echo "Infos sur le film :==> ". "\n" .
      $film->getIdFilm() . " - " . $film->getNomFilm(). " - ". $film->getNbEntrees() . " - ". $film->getRealisateur()->getNomRealisateur() . " " .$film->getRealisateur()->getPrenomRealisateur() . "\n".
      " Liste des acteurs ==> " . "\n" ;
       foreach($film->getActeurs() as $acteur){
-       echo $acteur->getNomActeur() . " - " . $acteur->getPrenomActeur() . " - " . $acteur->getEstCesarise() . "\n" ;
+       echo $acteur->getNomActeur() . " - " . $acteur->getPrenomActeur() . " - " . ($acteur->getEstCesarise() ? 'true':'false') . "\n" ;
      }
      } 
 
